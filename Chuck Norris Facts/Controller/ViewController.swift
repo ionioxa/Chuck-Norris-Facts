@@ -10,16 +10,30 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    
+    @IBOutlet weak var jokes: UILabel!
+    @IBOutlet weak var jokesNumber: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func shareBtn(_ sender: UIButton) {
     }
-
-
+    
+    @IBAction func favoriteBtn(_ sender: UIButton) {
+    }
+    
+    @IBAction func randomBtn(_ sender: UIButton) {
+    }
+    
+    
+    @IBAction func menuBtn(_ sender: UIButton) {
+    }
+    
+    
 }
 

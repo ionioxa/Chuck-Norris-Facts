@@ -97,10 +97,9 @@
 		37E7CEB0201AC4B70068D7CB /* Chuck Norris Facts */ = {
 			isa = PBXGroup;
 			children = (
-				37E7CEB1201AC4B70068D7CB /* AppDelegate.swift */,
-				37E7CEB3201AC4B70068D7CB /* ViewController.swift */,
-				37E7CEB5201AC4B70068D7CB /* Main.storyboard */,
-				37E7CEB8201AC4B70068D7CB /* Assets.xcassets */,
+				37E7CEE1201ACDFE0068D7CB /* Controller */,
+				37E7CEE0201ACDF40068D7CB /* View */,
+				37E7CEDF201ACDE80068D7CB /* Model */,
 				37E7CEBA201AC4B70068D7CB /* LaunchScreen.storyboard */,
 				37E7CEBD201AC4B70068D7CB /* Info.plist */,
 			);
@@ -123,6 +122,31 @@
 				37E7CED3201AC4B70068D7CB /* Info.plist */,
 			);
 			path = "Chuck Norris FactsUITests";
+			sourceTree = "<group>";
+		};
+		37E7CEDF201ACDE80068D7CB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		37E7CEE0201ACDF40068D7CB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				37E7CEB5201AC4B70068D7CB /* Main.storyboard */,
+				37E7CEB8201AC4B70068D7CB /* Assets.xcassets */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		37E7CEE1201ACDFE0068D7CB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				37E7CEB1201AC4B70068D7CB /* AppDelegate.swift */,
+				37E7CEB3201AC4B70068D7CB /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

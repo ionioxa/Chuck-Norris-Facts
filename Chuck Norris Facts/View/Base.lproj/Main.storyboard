@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Regular</string>
+        </array>
+        <array key="Futura.ttc">
+            <string>Futura-MediumItalic</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Chuck_Norris_Facts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sxf-IA-Uyd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Chuck-Norris-2-560x280" translatesAutoresizingMaskIntoConstraints="NO" id="kop-7L-Dor">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="188"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="188" id="bd3-VI-paw"/>
+                                            <constraint firstAttribute="width" constant="375" id="tuT-xs-32H"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ha-Ym-b3E">
+                                        <rect key="frame" x="163" y="224" width="66" height="38"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="66" id="Qy0-v0-Lkc"/>
+                                            <constraint firstAttribute="height" constant="38" id="i10-tw-qRK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="21"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There is no theory of evolution, just a list of creatures that Chuck Norris allows to live." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5J-Fq-JaO">
+                                        <rect key="frame" x="16" y="270" width="343" height="294"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="294" id="OkV-e5-hbS"/>
+                                            <constraint firstAttribute="width" constant="343" id="gKB-DO-vg4"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="31"/>
+                                        <color key="textColor" red="0.66343528032302856" green="0.27018463611602783" blue="0.3137144148349762" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yod-hf-jm0">
+                                        <rect key="frame" x="0.0" y="151" width="48" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="48" id="8iB-ET-CPV"/>
+                                            <constraint firstAttribute="height" constant="22" id="gDF-lJ-c2R"/>
+                                        </constraints>
+                                        <state key="normal" image="menubtn"/>
+                                        <connections>
+                                            <action selector="menuBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zog-4x-Rit"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="64I-74-MW2">
+                                        <rect key="frame" x="136" y="572" width="103" height="61"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="103" id="O9l-V9-mHX"/>
+                                            <constraint firstAttribute="height" constant="61" id="gw4-LJ-J90"/>
+                                        </constraints>
+                                        <state key="normal" image="shuffle"/>
+                                        <connections>
+                                            <action selector="randomBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JAR-uA-EN3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dL-Bi-JrO">
+                                        <rect key="frame" x="81" y="226" width="37" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="37" id="BK3-Vu-ZeZ"/>
+                                            <constraint firstAttribute="height" constant="37" id="RhN-Gr-k0s"/>
+                                        </constraints>
+                                        <state key="normal" image="share"/>
+                                        <connections>
+                                            <action selector="shareBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m5p-KQ-DrN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EQN-4E-nfb">
+                                        <rect key="frame" x="260.5" y="226" width="38" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="38" id="dLX-gQ-BNB"/>
+                                            <constraint firstAttribute="height" constant="37" id="uzx-U2-8rb"/>
+                                        </constraints>
+                                        <state key="normal" image="starempty"/>
+                                        <connections>
+                                            <action selector="favoriteBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fhE-eO-k30"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="64I-74-MW2" firstAttribute="centerX" secondItem="sxf-IA-Uyd" secondAttribute="centerX" id="1Ar-Tx-8Mw"/>
+                                    <constraint firstItem="9Ha-Ym-b3E" firstAttribute="top" secondItem="kop-7L-Dor" secondAttribute="bottom" constant="36" id="3V2-KY-TOY"/>
+                                    <constraint firstItem="EQN-4E-nfb" firstAttribute="leading" secondItem="9Ha-Ym-b3E" secondAttribute="trailing" constant="31.5" id="6TE-LC-uPx"/>
+                                    <constraint firstItem="kop-7L-Dor" firstAttribute="leading" secondItem="sxf-IA-Uyd" secondAttribute="leading" id="6ce-wv-gX2"/>
+                                    <constraint firstItem="kop-7L-Dor" firstAttribute="top" secondItem="sxf-IA-Uyd" secondAttribute="top" id="G9i-oV-ai0"/>
+                                    <constraint firstItem="3dL-Bi-JrO" firstAttribute="top" secondItem="kop-7L-Dor" secondAttribute="bottom" constant="38" id="KeT-TP-CuA"/>
+                                    <constraint firstItem="3dL-Bi-JrO" firstAttribute="leading" secondItem="sxf-IA-Uyd" secondAttribute="leading" constant="81" id="M6g-nv-5bG"/>
+                                    <constraint firstAttribute="trailing" secondItem="kop-7L-Dor" secondAttribute="trailing" id="Q76-Md-O54"/>
+                                    <constraint firstItem="EQN-4E-nfb" firstAttribute="top" secondItem="kop-7L-Dor" secondAttribute="bottom" constant="38" id="Rhd-Uw-RPW"/>
+                                    <constraint firstItem="Yod-hf-jm0" firstAttribute="top" secondItem="sxf-IA-Uyd" secondAttribute="top" constant="151" id="XHb-hN-WoC"/>
+                                    <constraint firstItem="64I-74-MW2" firstAttribute="top" secondItem="b5J-Fq-JaO" secondAttribute="bottom" constant="8" id="bc8-ZN-tB7"/>
+                                    <constraint firstItem="9Ha-Ym-b3E" firstAttribute="leading" secondItem="3dL-Bi-JrO" secondAttribute="trailing" constant="44.5" id="dvD-FL-gmL"/>
+                                    <constraint firstItem="b5J-Fq-JaO" firstAttribute="centerX" secondItem="sxf-IA-Uyd" secondAttribute="centerX" id="eoG-yW-UOr"/>
+                                    <constraint firstItem="9Ha-Ym-b3E" firstAttribute="centerX" secondItem="sxf-IA-Uyd" secondAttribute="centerX" constant="8.5" id="lWe-uC-Nxd"/>
+                                    <constraint firstItem="Yod-hf-jm0" firstAttribute="leading" secondItem="sxf-IA-Uyd" secondAttribute="leading" id="nOb-Dp-sSp"/>
+                                    <constraint firstItem="b5J-Fq-JaO" firstAttribute="top" secondItem="3dL-Bi-JrO" secondAttribute="bottom" constant="7" id="uUJ-EB-atf"/>
+                                    <constraint firstItem="EQN-4E-nfb" firstAttribute="leading" secondItem="9Ha-Ym-b3E" secondAttribute="trailing" constant="31.5" id="wNd-Ef-cPF"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sxf-IA-Uyd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Mou-za-wlA"/>
+                            <constraint firstItem="sxf-IA-Uyd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hWt-9L-DKV"/>
+                            <constraint firstItem="sxf-IA-Uyd" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="xIQ-CP-Bq3"/>
+                            <constraint firstItem="sxf-IA-Uyd" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zek-jf-Txp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="jokes" destination="b5J-Fq-JaO" id="AuW-ob-lbW"/>
+                        <outlet property="jokesNumber" destination="9Ha-Ym-b3E" id="MQN-cX-bvR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Chuck-Norris-2-560x280" width="560" height="280"/>
+        <image name="menubtn" width="20" height="14"/>
+        <image name="share" width="512" height="512"/>
+        <image name="shuffle" width="512" height="512"/>
+        <image name="starempty" width="38" height="36"/>
+    </resources>
+</document>
