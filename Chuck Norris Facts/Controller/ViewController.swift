@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import SVProgressHUD
+import Social
 
 
 class ViewController: UIViewController {
@@ -18,8 +19,10 @@ class ViewController: UIViewController {
     var joke : String = ""
     var jokeId : Int = 0
     
+    
     @IBOutlet weak var jokes: UILabel!
     @IBOutlet weak var jokesNumber: UILabel!
+    @IBOutlet weak var favoriteImage: UIButton!
     
     
     override func viewDidLoad() {
@@ -29,17 +32,48 @@ class ViewController: UIViewController {
     
 
     @IBAction func shareBtn(_ sender: UIButton) {
+        
+        let activityController = UIActivityViewController(activityItems: [jokes.text!], applicationActivities: nil)
+        present(activityController, animated: true, completion: nil)
+        
     }
     
     @IBAction func favoriteBtn(_ sender: UIButton) {
+        
+        
+        if sender.currentImage == #imageLiteral(resourceName: "starempty") {
+            // do something
+        } else {
+            //
+        }
+
+        toggleButton(button: sender, onImage: #imageLiteral(resourceName: "starfilled"), offImage: #imageLiteral(resourceName: "starempty"))
+        
     }
     
     @IBAction func randomBtn(_ sender: UIButton) {
         self.getJokesData(url: randomJokesURL)
+        
     }
     
     
     @IBAction func menuBtn(_ sender: UIButton) {
+    }
+    
+    func toggleButton (button: UIButton, onImage: UIImage, offImage: UIImage) {
+        
+        if button.currentImage == offImage {
+            button.setImage(onImage, for: .normal)
+        } else {
+            button.setImage(offImage, for: .normal)
+        }
+        
+    }
+    
+    func updateUI() {
+        
+        
+        
     }
     
     //MARK: - Networking
@@ -88,6 +122,19 @@ class ViewController: UIViewController {
             
             jokesNumber.text = "..."
             
+        }
+    }
+    
+    //MARK: - Segue Data Transfer
+    /************************************************************************/
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "goToSecondScreen" {
+            
+            let destinationVC = segue.destination as! SecondViewController
+            
+            destinationVC.jokePassedOver = jokes.text!
         }
     }
     
