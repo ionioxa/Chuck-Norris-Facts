@@ -10,9 +10,9 @@ import UIKit
 
 class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-
-    var jokePassedOver : String?
-    
+    //MARK: - Declaration of the properties
+    /************************************************************************/
+    var jokesPassed : [String] = []
     
     
     override func viewDidLoad() {
@@ -25,30 +25,35 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         configureTableView()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewWillAppear(_ animated: Bool) {
+      
+        favoriteTableView.reloadData()
     }
     
+    // The TableView Outlet
     @IBOutlet weak var favoriteTableView: UITableView!
+    
+    // Creating the BackButton
     @IBAction func backButtonPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
     
+    // toDO: Declare numberOfRowsInSection
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return jokesPassed.count
     }
     
+    // toDO: Declare cellForRowAtIndexPath
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "favoriteJokeCell", for: indexPath) as! CustomFavoriteJokeCell
         
-        let jokesArray = ["First Message", "Secom,mnknkjnkjnkjnkjnkjnkjnkjnkjnkjnknkjnjnjnjknjnkjnkjnkjnknkjnkjnjknjknjknknjknknkjnkjnknjknknd Message", "Third Message"]
         
-        cell.favoriteJoke.text = jokesArray[indexPath.row]
+        cell.favoriteJoke.text = jokesPassed[indexPath.row]
         
         return cell
     }
+    
     
     // toDO: Declare configureTableView here:
     
@@ -59,6 +64,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
     }
     
+
     /*
     // MARK: - Navigation
 

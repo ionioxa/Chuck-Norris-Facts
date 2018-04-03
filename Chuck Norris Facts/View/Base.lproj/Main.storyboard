@@ -1,24 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Avenir.ttc">
-            <string>Avenir-Book</string>
-        </array>
-        <array key="Futura.ttc">
-            <string>Futura-MediumItalic</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -218,20 +210,17 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GDn-R1-Kua">
-                                <rect key="frame" x="0.0" y="183" width="375" height="485"/>
+                                <rect key="frame" x="0.0" y="183" width="375" height="484"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lDc-UZ-JtM">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="485"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="484"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="lDc-UZ-JtM" secondAttribute="height" multiplier="75:97" id="Koo-Pn-OZ9"/>
-                                        </constraints>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="gCE-Sa-meM">
-                                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                                <rect key="frame" x="0.0" y="28" width="374" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gCE-Sa-meM" id="noR-MT-ZyT">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </tableViewCellContentView>
                                             </tableViewCell>
@@ -240,11 +229,11 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="lDc-UZ-JtM" firstAttribute="leading" secondItem="GDn-R1-Kua" secondAttribute="leading" id="FJI-yh-hS9"/>
+                                    <constraint firstAttribute="bottom" secondItem="lDc-UZ-JtM" secondAttribute="bottom" id="Pc2-cW-QdE"/>
                                     <constraint firstAttribute="width" secondItem="GDn-R1-Kua" secondAttribute="height" multiplier="75:97" id="RHS-ry-9Tv"/>
-                                    <constraint firstAttribute="trailing" secondItem="lDc-UZ-JtM" secondAttribute="trailing" id="Zg0-7L-MBf"/>
-                                    <constraint firstItem="lDc-UZ-JtM" firstAttribute="top" secondItem="GDn-R1-Kua" secondAttribute="top" id="eOK-bW-7v3"/>
-                                    <constraint firstItem="lDc-UZ-JtM" firstAttribute="leading" secondItem="GDn-R1-Kua" secondAttribute="leading" id="quh-V0-RoL"/>
-                                    <constraint firstAttribute="bottom" secondItem="lDc-UZ-JtM" secondAttribute="bottom" id="sjO-xC-FVP"/>
+                                    <constraint firstItem="lDc-UZ-JtM" firstAttribute="top" secondItem="GDn-R1-Kua" secondAttribute="top" id="W6E-ps-SQp"/>
+                                    <constraint firstItem="lDc-UZ-JtM" firstAttribute="centerX" secondItem="GDn-R1-Kua" secondAttribute="centerX" id="hZt-d9-Fdq"/>
                                 </constraints>
                             </view>
                         </subviews>

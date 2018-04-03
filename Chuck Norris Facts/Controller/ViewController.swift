@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     let randomJokesURL = "http://api.icndb.com/jokes/random"
     var joke : String = ""
     var jokeId : Int = 0
+    var favoriteJokes : [String] = []
     
     
     @IBOutlet weak var jokes: UILabel!
@@ -26,11 +27,18 @@ class ViewController: UIViewController {
     
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        
+        let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Jokes.plist")
+        
+        print(dataFilePath)
+        
         self.getJokesData(url: randomJokesURL)
     }
     
-
+    //MARK: - Sharing Button
+    /************************************************************************/
     @IBAction func shareBtn(_ sender: UIButton) {
         
         let activityController = UIActivityViewController(activityItems: [jokes.text!], applicationActivities: nil)
@@ -38,11 +46,14 @@ class ViewController: UIViewController {
         
     }
     
+    //MARK: - Favorite Button
+    /************************************************************************/
     @IBAction func favoriteBtn(_ sender: UIButton) {
         
-        
         if sender.currentImage == #imageLiteral(resourceName: "starempty") {
-            // do something
+            
+            favoriteJokes.append(jokes.text!)
+            print(favoriteJokes)
         } else {
             //
         }
@@ -51,15 +62,22 @@ class ViewController: UIViewController {
         
     }
     
+    //MARK: - Random Jokes Button
+    /************************************************************************/
     @IBAction func randomBtn(_ sender: UIButton) {
         self.getJokesData(url: randomJokesURL)
-        
+        favoriteImage.setImage(#imageLiteral(resourceName: "starempty"), for: .normal)
     }
     
     
     @IBAction func menuBtn(_ sender: UIButton) {
+        performSegue(withIdentifier: "goToSecondScreen", sender: self)
     }
     
+    
+    
+    //MARK: - Created Toggle Method for the Favorite image
+    /************************************************************************/
     func toggleButton (button: UIButton, onImage: UIImage, offImage: UIImage) {
         
         if button.currentImage == offImage {
@@ -70,11 +88,6 @@ class ViewController: UIViewController {
         
     }
     
-    func updateUI() {
-        
-        
-        
-    }
     
     //MARK: - Networking
     /************************************************************************/
@@ -104,8 +117,12 @@ class ViewController: UIViewController {
         
         if let jokesResult = json["value"]["joke"].string {
             
+            
             joke = String(jokesResult)
-            jokes.text = "\(joke)"
+            
+            let correctJokes = joke.replacingOccurrences(of: "&quot;", with: "\"", options: .literal, range: nil)
+            
+            jokes.text = "\(correctJokes)"
             
         } else {
             
@@ -134,7 +151,7 @@ class ViewController: UIViewController {
             
             let destinationVC = segue.destination as! SecondViewController
             
-            destinationVC.jokePassedOver = jokes.text!
+            destinationVC.jokesPassed = favoriteJokes
         }
     }
     
