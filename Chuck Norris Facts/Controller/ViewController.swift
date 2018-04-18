@@ -19,7 +19,9 @@ class ViewController: UIViewController {
     var joke : String = ""
     var jokeId : Int = 0
     var favoriteJokes : [String] = []
-    
+    let defaults = UserDefaults.standard
+
+//    let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Jokes.plist")
     
     @IBOutlet weak var jokes: UILabel!
     @IBOutlet weak var jokesNumber: UILabel!
@@ -30,9 +32,11 @@ class ViewController: UIViewController {
         
         super.viewDidLoad()
         
-        let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Jokes.plist")
         
-        print(dataFilePath)
+        if let favoriteJokesArray = defaults.array(forKey: "JokesArray") as? [String] {
+            favoriteJokes = favoriteJokesArray
+        }
+//        print(dataFilePath)
         
         self.getJokesData(url: randomJokesURL)
     }
@@ -53,6 +57,18 @@ class ViewController: UIViewController {
         if sender.currentImage == #imageLiteral(resourceName: "starempty") {
             
             favoriteJokes.append(jokes.text!)
+            
+            self.defaults.set(self.favoriteJokes, forKey: "JokesArray")
+            
+//            let encoder = PropertyListEncoder()
+//
+//            do {
+//            let data = try encoder.encode(self.favoriteJokes)
+//            try data.write(to: self.dataFilePath!)
+//            }
+//            catch {
+//                print("Error encoding jokes array, \(error)")
+//            }
             print(favoriteJokes)
         } else {
             //

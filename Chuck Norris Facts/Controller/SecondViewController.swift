@@ -14,7 +14,6 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     /************************************************************************/
     var jokesPassed : [String] = []
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         favoriteTableView.delegate = self

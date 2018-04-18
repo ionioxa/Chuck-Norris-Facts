@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		046E15B6110DE7A419B3148E /* Pods_Chuck_Norris_Facts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD5E20350460DAA4A38A277 /* Pods_Chuck_Norris_Facts.framework */; };
 		37779CA9204B45C000A71262 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37779CA8204B45C000A71262 /* SecondViewController.swift */; };
+		378E9377207DADB100707EDE /* Jokes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378E9376207DADB100707EDE /* Jokes.swift */; };
 		37E7CEB2201AC4B70068D7CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E7CEB1201AC4B70068D7CB /* AppDelegate.swift */; };
 		37E7CEB4201AC4B70068D7CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E7CEB3201AC4B70068D7CB /* ViewController.swift */; };
 		37E7CEB7201AC4B70068D7CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37E7CEB5201AC4B70068D7CB /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 		17BC38D924A102BA3CBA0266 /* Pods-Chuck Norris FactsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chuck Norris FactsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chuck Norris FactsTests/Pods-Chuck Norris FactsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		29C48AD82637D1FFC5016DD2 /* Pods_Chuck_Norris_FactsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chuck_Norris_FactsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37779CA8204B45C000A71262 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		378E9376207DADB100707EDE /* Jokes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jokes.swift; sourceTree = "<group>"; };
 		37E7CEAE201AC4B70068D7CB /* Chuck Norris Facts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chuck Norris Facts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37E7CEB1201AC4B70068D7CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37E7CEB3201AC4B70068D7CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 		37E7CEDF201ACDE80068D7CB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				378E9376207DADB100707EDE /* Jokes.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -503,6 +506,7 @@
 				37E7CEB4201AC4B70068D7CB /* ViewController.swift in Sources */,
 				37E7CEB2201AC4B70068D7CB /* AppDelegate.swift in Sources */,
 				37FA88D7204CE40D001C2254 /* CustomFavoriteJokeCell.swift in Sources */,
+				378E9377207DADB100707EDE /* Jokes.swift in Sources */,
 				37F7E47B207045F4001AFEB3 /* Chuck Norris Facts.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

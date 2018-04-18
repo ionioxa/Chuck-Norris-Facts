@@ -27,10 +27,10 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="183"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yod-hf-jm0">
-                                        <rect key="frame" x="8" y="140" width="32" height="35"/>
+                                        <rect key="frame" x="8" y="135" width="40" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="KzF-FR-kWz"/>
-                                            <constraint firstAttribute="width" constant="32" id="UWd-wI-sfu"/>
+                                            <constraint firstAttribute="height" constant="40" id="KzF-FR-kWz"/>
+                                            <constraint firstAttribute="width" constant="40" id="UWd-wI-sfu"/>
                                         </constraints>
                                         <state key="normal" image="menubtn"/>
                                         <connections>
@@ -101,7 +101,7 @@
                                 <rect key="frame" x="0.0" y="624" width="375" height="43"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="64I-74-MW2">
-                                        <rect key="frame" x="162" y="2" width="51" height="40"/>
+                                        <rect key="frame" x="162" y="-12" width="51" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="9Ab-Je-3U9"/>
                                             <constraint firstAttribute="width" constant="51" id="pxk-eL-6hP"/>
@@ -115,14 +115,14 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hYp-IK-jLb" secondAttribute="height" multiplier="375:43" id="4kw-FP-3jE"/>
                                     <constraint firstItem="64I-74-MW2" firstAttribute="centerX" secondItem="hYp-IK-jLb" secondAttribute="centerX" id="ETk-Jd-MVn"/>
-                                    <constraint firstItem="64I-74-MW2" firstAttribute="centerY" secondItem="hYp-IK-jLb" secondAttribute="centerY" id="tY7-Ey-6oH"/>
+                                    <constraint firstItem="64I-74-MW2" firstAttribute="centerY" secondItem="hYp-IK-jLb" secondAttribute="centerY" constant="-13.5" id="tY7-Ey-6oH"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XAo-1p-WcY" userLabel="Jokes Container">
                                 <rect key="frame" x="0.0" y="234" width="375" height="390"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There is no theory of evolution, just a list of creatures that Chuck Norris allows to live." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b5J-Fq-JaO">
-                                        <rect key="frame" x="8" y="0.0" width="359" height="390"/>
+                                        <rect key="frame" x="8" y="0.0" width="359" height="382"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="31"/>
                                         <color key="textColor" red="0.66343528032302856" green="0.27018463611602783" blue="0.3137144148349762" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
@@ -131,7 +131,7 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="b5J-Fq-JaO" secondAttribute="trailing" constant="8" id="9ns-xQ-F9R"/>
                                     <constraint firstItem="b5J-Fq-JaO" firstAttribute="top" secondItem="XAo-1p-WcY" secondAttribute="top" id="Bxx-oy-wul"/>
-                                    <constraint firstAttribute="bottom" secondItem="b5J-Fq-JaO" secondAttribute="bottom" id="F7b-Cw-YX1"/>
+                                    <constraint firstAttribute="bottom" secondItem="b5J-Fq-JaO" secondAttribute="bottom" constant="8" id="F7b-Cw-YX1"/>
                                     <constraint firstAttribute="width" secondItem="XAo-1p-WcY" secondAttribute="height" multiplier="25:26" id="pdJ-VI-MVj"/>
                                     <constraint firstItem="b5J-Fq-JaO" firstAttribute="leading" secondItem="XAo-1p-WcY" secondAttribute="leading" constant="8" id="yFU-8w-GDs"/>
                                 </constraints>
@@ -186,10 +186,10 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZK7-XP-wA4">
-                                        <rect key="frame" x="8" y="140" width="32" height="35"/>
+                                        <rect key="frame" x="8" y="135" width="40" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="32" id="0Qg-BU-Suc"/>
-                                            <constraint firstAttribute="height" constant="35" id="Fqk-as-bi1"/>
+                                            <constraint firstAttribute="width" constant="40" id="0Qg-BU-Suc"/>
+                                            <constraint firstAttribute="height" constant="40" id="Fqk-as-bi1"/>
                                         </constraints>
                                         <state key="normal" image="backbutton"/>
                                         <connections>
